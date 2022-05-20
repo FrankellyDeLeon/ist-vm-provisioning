@@ -42,6 +42,7 @@ resource "vsphere_folder" "vm_folder" {
 #Lets see something cool with Cisco Intersight & TFCB
 resource "vsphere_virtual_machine" "vm_deploy" {
   count            = var.vm_count
+  vm_prefix        = var.vm_prefix
   name             = "${var.vm_prefix}-${random_string.folder_name_prefix.id}-${count.index + 1}"
 
   resource_pool_id = data.vsphere_resource_pool.pool.id
