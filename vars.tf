@@ -56,11 +56,6 @@ variable "vm_memory" {
   default = 2048
 }
 
-variable "vm_prefix" {
-  type = string
-  description = "The name prefix of the virtual machines to create"
-}
-
 variable "vm_folder" {
   type = string
   description = "Name of folder"
@@ -69,10 +64,5 @@ variable "vm_folder" {
 variable "vm_count" {
   type = number
   description = "Number of VMs to provision"
-  default = 1
-}
-
-variable "vm_domain" {
-  type = string
-  description = "Domain Name for the virtual machine"
+  default = 5
 }
